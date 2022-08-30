@@ -42,8 +42,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp"
-        tools:ignore="ContentDescription"
-    />
+        tools:ignore="ContentDescription" />
+
+
 
     <Button
         android:id="@+id/btn"

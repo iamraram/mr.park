@@ -1,14 +1,17 @@
 package com.haram.mrpark
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import java.util.Random
+import androidx.appcompat.app.AppCompatActivity
+import java.util.*
+
 
 class PlayActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
@@ -61,12 +64,16 @@ class PlayActivity : AppCompatActivity() {
                 Toast.makeText(this, "강화에 실패했습니다.", Toast.LENGTH_SHORT).show()
             }
             else {
+                val animation: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.scale)
+                imgAct.startAnimation(animation)
+
                 title.text = "${click + 1}단계 박희찬"
                 for (i in desc) {
                     descAct.text = i.value
                 }
                 perAct.text = "강화 확률 ${percent[click]}%"
                 imgAct.setImageResource(img[click]);
+
             }
         }
     }
