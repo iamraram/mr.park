@@ -5,7 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/imganimation.xml" value="0.1025" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28805541992187506" />
-        <entry key="app/src/main/res/layout/activity_play.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_play.xml" value="0.26400299072265626" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2866847826086957" />
       </map>
     </option>
@@ -15,5 +15,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.26400299072265626" />
+      </ProjectState>
+    </option>
   </component>
 </project>
