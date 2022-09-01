@@ -1,7 +1,9 @@
 package com.haram.mrpark
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -12,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 class PlayActivity : AppCompatActivity() {
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "ShowToast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play)
@@ -24,10 +26,10 @@ class PlayActivity : AppCompatActivity() {
             "꽃과 함께하는 아름다운 자태가 꽤나 매력적이다.",
             "1988 올림픽을 응원하는 캡틴 코리아 박희찬이다.",
             "부끄뎌운 희딴이 ver 1 - 매우 수줍어한다.",
-            "부끄뎌운 희딴이 ver 2 - 깜찍한 포즈로 올리는 가운뎃손가락.",
+            "부끄뎌운 희딴이 ver 2 - 깜찍한 포즈의 가운뎃손가락.",
             "부끄뎌운 희딴이 ver 3 - 새빨개진 얼굴로 입을 가린다.",
             "선린 입학 첫 날 미연시를 하는 희찬.",
-            "애플파이에 들어가기를 희망하는 개발뉴비 희찬.",
+            "애플파이에 들어가기를 희망하는 신입생 희찬.",
         )
 
         val select: MutableMap<Int, String> = mutableMapOf(
@@ -52,6 +54,11 @@ class PlayActivity : AppCompatActivity() {
             R.drawable.lv8,
             R.drawable.lv9,
             R.drawable.lv10,
+            R.drawable.lv10,
+            R.drawable.lv10,
+            R.drawable.lv10,
+            R.drawable.lv10,
+            R.drawable.lv10,
         )
 
         var click:Int = 0
@@ -74,7 +81,10 @@ class PlayActivity : AppCompatActivity() {
             val num = random.nextInt(100)
 
             if (num > percent[click]) {
-                Toast.makeText(this, "강화에 실패했습니다.", Toast.LENGTH_SHORT).show()
+                val toast = Toast.makeText(this, "강화에 실패했습니다.", Toast.LENGTH_SHORT)
+                toast.setGravity(Gravity.TOP, 0, 30)
+                toast.show()
+
                 percent[click] += 1
                 temp += 1
                 perAct.text = "강화 확률 ${percent[click]}%"
@@ -82,9 +92,23 @@ class PlayActivity : AppCompatActivity() {
                 click -= 1
             }
             else {
-                perAct.text = "강화 확률 ${percent[click]}%"
+                if (click == 10) {
+                    val intent = Intent(this, FinishActivity::class.java)
+                    startActivity(intent)
+                }
+                var txt:String = ""
+
+                for (i in select) {
+                    if (click == i.key) {
+                        count.text = i.value
+                    }
+                    else {
+                        count.text = "강화 성공!"
+                    }
+                }
+
+                perAct.text = "강화 확률 ${percent[click + 1]}%"
                 temp = 0
-                count.text = "강화 성공!"
 
                 val animation: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.scale)
                 imgAct.startAnimation(animation)
