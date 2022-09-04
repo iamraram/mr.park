@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/mr.park/app/src/main/res/layout/activity_main.xml" value="0.35989583333333336" />
+        <entry key="..\:/Android/mr.park/app/src/main/res/layout/activity_splash.xml" value="0.35989583333333336" />
         <entry key="app/src/main/res/drawable/imganimation.xml" value="0.1025" />
         <entry key="app/src/main/res/layout/activity_finish.xml" value="0.16364460562103356" />
         <entry key="app/src/main/res/layout/activity_help.xml" value="0.16364460562103356" />
