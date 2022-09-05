@@ -14,8 +14,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener {
             val intent = Intent(this, PlayActivity::class.java)
             startActivity(intent)
+            finish()
         }
-
-
     }
 }
