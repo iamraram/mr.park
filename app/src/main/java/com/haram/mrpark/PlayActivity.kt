@@ -70,15 +70,14 @@ class PlayActivity : AppCompatActivity() {
 
             } else {
                 // 강화에 성공한 경우
-                if (click == datas.size) {
-                    //todo 제한 조건 확인
+
+                click += 1
+
+                if (click == datas.size) { //todo 제한 조건 확인
                     val intent = Intent(this, FinishActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
-
-
-                click += 1
 
                 for (i in select) {
                     if (click == i.key) {
