@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/mr.park/app/src/main/res/layout/activity_finish.xml" value="0.35885416666666664" />
-        <entry key="..\:/Android/mr.park/app/src/main/res/layout/activity_help.xml" value="0.2765625" />
+        <entry key="..\:/Android/mr.park/app/src/main/res/layout/activity_help.xml" value="0.1" />
         <entry key="..\:/Android/mr.park/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Android/mr.park/app/src/main/res/layout/activity_splash.xml" value="0.35989583333333336" />
         <entry key="app/src/main/res/drawable/imganimation.xml" value="0.1025" />
@@ -23,7 +23,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.26400299072265626" />
+        <option name="scale" value="0.1" />
       </ProjectState>
     </option>
   </component>
